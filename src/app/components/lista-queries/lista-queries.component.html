@@ -1,0 +1,247 @@
+<div class="container mt-5">
+    <div class="flex-row d-flex justify-content-around">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p class="title text-center">LISTADO DE QUERIES</p>
+                    <div class="row scroll-list">
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Total de desperfectos por titulo</span>
+                                    <button class="btn btn-success float-end" (click)="getDesperfectosPorTitulo()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Total de desperfectos en el mes de Octubre</span>
+                                    <button class="btn btn-success float-end" (click)="getDesperfectosEnOctubre()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Total de desperfectos por oficina</span>
+                                    <button class="btn btn-success float-end" (click)="getDesperfectosPorOficina()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Que persona atiende mas tickets</span>
+                                    <button class="btn btn-success float-end" (click)="getAiendeMasTickets()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Tickets sin resolver</span>
+                                    <button class="btn btn-success float-end" (click)="getSinResolver()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Ver clientes cerca de oficinas</span>
+                                    <button class="btn btn-success float-end" (click)="getClientesCercaDeOficinas()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Cuantos clientes viven en Buenos Aires</span>
+                                    <button class="btn btn-success float-end" (click)="getClientesEnBA()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Cantidad de clientes que tengan el plan normal o super pack </span>
+                                    <button class="btn btn-success float-end" (click)="getCantidadPlanNormalOSuperPack()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Promedio de precio que paga un cliente por plan</span>
+                                    <button class="btn btn-success float-end" (click)="getPromedioPrecioPlan()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Incrementar los costos del plan normal en $500</span>
+                                    <button class="btn btn-success float-end" (click)="getIncrementoPlanNormal()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Incrementar los costos del plan super pack el doble</span>
+                                    <button class="btn btn-success float-end" (click)="getIncrementoPlanSuperPack()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">El maximo que se puede pagar por el plan normal es de $5000</span>
+                                    <button class="btn btn-success float-end" (click)="getMaxPlanNormal()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">El minimo que se puede pagar por el plan super pack es de $5000</span>
+                                    <button class="btn btn-success float-end" (click)="getMinPlanSuperPack()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Agregar a los que que tengan el plan super pack full que son clientes vip</span>
+                                    <button class="btn btn-success float-end" (click)="getAgregarCampoVip()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Renombrar el campo vip por cliente_vip</span>
+                                    <button class="btn btn-success float-end" (click)="getRenombrarCampoVip()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Borrar el campo cliente_vip</span>
+                                    <button class="btn btn-success float-end" (click)="getBorrarCampoVip()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Crear un indice en el campo plan nombre</span>
+                                    <button class="btn btn-success float-end" (click)="getCrearIndiceCampoNombre()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Listar indices</span>
+                                    <button class="btn btn-success float-end" (click)="getIndices()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Borrar el indice de nombre_plan</span>
+                                    <button class="btn btn-success float-end" (click)="getBorrarIndice()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Crear un indice de texto en el campo problema</span>
+                                    <button class="btn btn-success float-end" (click)="getCrearIndiceTexto()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Buscar cuantos tickets tienen la palabra hd en el campo problema</span>
+                                    <button class="btn btn-success float-end" (click)="getContienePalabraHd()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Buscar los clientes a los cuales se le agrego Space en las derivaciones</span>
+                                    <button class="btn btn-success float-end" (click)="getClientesConCanalSpace()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-2">
+                            <div class="card">
+                                <div class="card-body card-hover">
+                                    <span class="title">Tickets por resolver de los que tienen mas de 4 dias de vacaciones</span>
+                                    <button class="btn btn-success float-end" (click)="getPendientesConVacaciones()">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-column d-flex justify-content-around col-md-4">
+            <app-box-request [query]="query"></app-box-request>
+            <app-box-response class="mt-3" [response]="response"></app-box-response>
+        </div>
+    </div>
+</div>
