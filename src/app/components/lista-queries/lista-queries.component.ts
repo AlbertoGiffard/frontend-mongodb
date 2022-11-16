@@ -7,30 +7,31 @@ import { TicketsService } from 'src/app/services/tickets.service';
   styleUrls: ['./lista-queries.component.css']
 })
 export class ListaQueriesComponent implements OnInit {
-  obtenerTickets = 'http://localhost:4000/';
-  desperfectosPorTitulo = 'http://localhost:4000/desperfectosPorTitulo';
-  desperfectosEnOctubre = 'http://localhost:4000/desperfectosEnOctubre';
-  desperfectosPorOficina = 'http://localhost:4000/desperfectosPorOficina';
-  aiendeMasTickets = 'http://localhost:4000/aiendeMasTickets';
-  sinResolver = 'http://localhost:4000/sinResolver';
-  clientesCercaDeOficinas = 'http://localhost:4000/clientesCercaDeOficinas';
-  clientesEnBA = 'http://localhost:4000/clientesEnBA';
-  cantidadPlanNormalOSuperPack = 'http://localhost:4000/cantidadPlanNormalOSuperPack';
-  promedioPrecioPlan = 'http://localhost:4000/promedioPrecioPlan';
-  incrementoPlanNormal = 'http://localhost:4000/incrementoPlanNormal';
-  incrementoPlanSuperPack = 'http://localhost:4000/incrementoPlanSuperPack';
-  maxPlanNormal = 'http://localhost:4000/maxPlanNormal';
-  minPlanSuperPack = 'http://localhost:4000/minPlanSuperPack';
-  agregarCampoVip = 'http://localhost:4000/agregarCampoVip';
-  renombrarCampoVip = 'http://localhost:4000/renombrarCampoVip';
-  borrarCampoVip = 'http://localhost:4000/borrarCampoVip';
-  crearIndiceCampoNombre = 'http://localhost:4000/crearIndiceCampoNombre';
-  indices = 'http://localhost:4000/indices';
-  borrarIndice = 'http://localhost:4000/borrarIndice';
-  crearIndiceTexto = 'http://localhost:4000/crearIndiceTexto';
-  contienePalabraHd = 'http://localhost:4000/contienePalabraHd';
-  clientesConCanalSpace = 'http://localhost:4000/clientesConCanalSpace';
-  pendientesConVacaciones = 'http://localhost:4000/pendientesConVacaciones';
+  //http://localhost:4000
+  obtenerTickets = 'https://backend-mongodb.netlify.app/';
+  desperfectosPorTitulo = 'https://backend-mongodb.netlify.app/desperfectosPorTitulo';
+  desperfectosEnOctubre = 'https://backend-mongodb.netlify.app/desperfectosEnOctubre';
+  desperfectosPorOficina = 'https://backend-mongodb.netlify.app/desperfectosPorOficina';
+  aiendeMasTickets = 'https://backend-mongodb.netlify.app/aiendeMasTickets';
+  sinResolver = 'https://backend-mongodb.netlify.app/sinResolver';
+  clientesCercaDeOficinas = 'https://backend-mongodb.netlify.app/clientesCercaDeOficinas';
+  clientesEnBA = 'https://backend-mongodb.netlify.app/clientesEnBA';
+  cantidadPlanNormalOSuperPack = 'https://backend-mongodb.netlify.app/cantidadPlanNormalOSuperPack';
+  promedioPrecioPlan = 'https://backend-mongodb.netlify.app/promedioPrecioPlan';
+  incrementoPlanNormal = 'https://backend-mongodb.netlify.app/incrementoPlanNormal';
+  incrementoPlanSuperPack = 'https://backend-mongodb.netlify.app/incrementoPlanSuperPack';
+  maxPlanNormal = 'https://backend-mongodb.netlify.app/maxPlanNormal';
+  minPlanSuperPack = 'https://backend-mongodb.netlify.app/minPlanSuperPack';
+  agregarCampoVip = 'https://backend-mongodb.netlify.app/agregarCampoVip';
+  renombrarCampoVip = 'https://backend-mongodb.netlify.app/renombrarCampoVip';
+  borrarCampoVip = 'https://backend-mongodb.netlify.app/borrarCampoVip';
+  crearIndiceCampoNombre = 'https://backend-mongodb.netlify.app/crearIndiceCampoNombre';
+  indices = 'https://backend-mongodb.netlify.app/indices';
+  borrarIndice = 'https://backend-mongodb.netlify.app/borrarIndice';
+  crearIndiceTexto = 'https://backend-mongodb.netlify.app/crearIndiceTexto';
+  contienePalabraHd = 'https://backend-mongodb.netlify.app/contienePalabraHd';
+  clientesConCanalSpace = 'https://backend-mongodb.netlify.app/clientesConCanalSpace';
+  pendientesConVacaciones = 'https://backend-mongodb.netlify.app/pendientesConVacaciones';
   response = "";
   query = "";
 
