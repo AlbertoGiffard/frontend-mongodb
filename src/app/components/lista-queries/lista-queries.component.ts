@@ -32,6 +32,11 @@ export class ListaQueriesComponent implements OnInit {
   contienePalabraHd = 'http://localhost:4000/contienePalabraHd';
   clientesConCanalSpace = 'http://localhost:4000/clientesConCanalSpace';
   pendientesConVacaciones = 'http://localhost:4000/pendientesConVacaciones';
+  queHay = 'http://localhost:4000/queHay';
+  tienenAtributoCampoVip = 'http://localhost:4000/tienenAtributoCampoVip';
+  tipoCanalesAgregados = 'http://localhost:4000/tipoCanalesAgregados';
+  agregadosCanalesEspecificos = 'http://localhost:4000/agregadosCanalesEspecificos';
+  paguenMenosOMasQueEstosValores = 'http://localhost:4000/paguenMenosOMasQueEstosValores';
   response = "";
   query = "";
 
@@ -252,6 +257,51 @@ export class ListaQueriesComponent implements OnInit {
     this.ticketService.getValues(this.pendientesConVacaciones).subscribe((data) => {
       this.response = JSON.stringify(data, null, 2);
       this.query = "empleados.aggregate([{$lookup:{from:'tickets',pipeline:[{$match:{resuelto:false}}],as:'ticket',localField:'dni',foreignField:'empleado.dni'}},{$match:{dias_de_vacaciones:{$gt:4}}},{$project:{nombre:1,apellido:1,dias_de_vacaciones:1,cantidad:{$size:'$ticket'}}},{$sort:{dias_de_vacaciones:-1}},]);";
+    }, error => {
+      console.log(error);      
+    })
+  }
+
+  getQueHay(){ 
+    this.ticketService.getValues(this.queHay).subscribe((data) => {
+      this.response = JSON.stringify(data, null, 2);
+      this.query = "ticket.findOne({'area.posicion_gps':{$geoIntersects:{$geometry:{type:'Point',coordinates:[-58.36241494736605,-34.66362091804544]}}}},{'area.tipo':1});";
+    }, error => {
+      console.log(error);      
+    })
+  }
+
+  getTienenAtributoCampoVip(){ 
+    this.ticketService.getValues(this.queHay).subscribe((data) => {
+      this.response = JSON.stringify(data, null, 2);
+      this.query = "ticket.find({campo_vip: {$exists: true}}).count();";
+    }, error => {
+      console.log(error);      
+    })
+  }
+
+  getTipoCanalesAgregados(){ 
+    this.ticketService.getValues(this.queHay).subscribe((data) => {
+      this.response = JSON.stringify(data, null, 2);
+      this.query = "ticket.aggregate([{$project:{tipo:{$type:'$derivaciones.canales_agregados'}}}])";
+    }, error => {
+      console.log(error);      
+    })
+  }
+
+  getAgregadosCanalesEspecificos(){ 
+    this.ticketService.getValues(this.queHay).subscribe((data) => {
+      this.response = JSON.stringify(data, null, 2);
+      this.query = "ticket.find({'derivaciones.canales_agregados':{$all:[['CartoonNetwork','Space']]}});";
+    }, error => {
+      console.log(error);      
+    })
+  }
+
+  getPaguenMenosOMasQueEstosValores(){ 
+    this.ticketService.getValues(this.queHay).subscribe((data) => {
+      this.response = JSON.stringify(data, null, 2);
+      this.query = "ticket.find({'plan.costo':{$elemMatch:{$gte:3000,$lt:6000}}});";
     }, error => {
       console.log(error);      
     })
