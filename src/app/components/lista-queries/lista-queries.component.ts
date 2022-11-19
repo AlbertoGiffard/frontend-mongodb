@@ -43,6 +43,8 @@ export class ListaQueriesComponent implements OnInit {
   constructor(private ticketService: TicketsService) { }
 
   ngOnInit(): void {
+    console.log("no soy localhost");
+    
     this.getTickets();
   }
 
